@@ -1,5 +1,7 @@
 # nginx-geoip2
 
+On docker hub: <https://hub.docker.com/r/jidckii/nginx-geoip2>
+
 Build based on official nginx and  [telize](https://github.com/jessfraz/dockerfiles/tree/master/telize)
 
 IP database location in /usr/share/GeoIP  
