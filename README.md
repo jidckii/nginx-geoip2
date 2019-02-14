@@ -9,8 +9,10 @@ Build based on official nginx and  [telize](https://github.com/jessfraz/dockerfi
 IP database location in /usr/share/GeoIP  
  
 For check:  
-Run:  
-`docker run --rm -it --name nginx-geoip2 --net host jidckii/nginx-geoip2:latest`  
+1. clone original git repo 
+2. change `localhost` to `_`in file nginx.vh.default.conf
+3. Run:  
+`docker run --rm -it --name nginx-geoip2 --net host -v $PWD/nginx.vh.default.conf:/etc/nginx/conf.d/default.conf jidckii/nginx-geoip2:latest`  
 Curl from host public ip:  
 ```
 curl -I http://${you-host-or-ip}
